@@ -1,0 +1,26 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+"e1839a8" = {path = ".", editable = true}
+requests = "*"
+cssselect = "*"
+lxml = "*"
+pyyaml = "*"
+
+
+[dev-packages]
+
+pytest = "*"
+twine = "*"
+"html2text" = "*"
+
+
+[requires]
+
+python_version = "3.6"

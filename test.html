@@ -1,0 +1,1697 @@
+
+<div class="result-header">
+    <h1>Showing Maximum of 500 Results</h1>
+	
+    <div id="space"></div>
+
+    <div id="page-tab-wrap">
+
+        <ol id="toc" class="view_tabs">
+            <li><a href="#">PHOTO VIEW</a></li>
+            <li class="current"><a href="#">LIST VIEW</a></li>
+            <li id="maptab"><a href="#" onclick="javascript:RedirectMapView();">MAP VIEW</a></li>
+        </ol>
+        
+		<div id="pagelist">
+                <ol class="pagenumbers">
+                    <li class="currentPage">Pages</li>
+                    <li>1</li>
+                <li><a href="#">2</a></li> <li><a href="#">3</a></li> <li><a href="#">4</a></li> <li><a href="#">5</a></li> <li><a href="#">6</a></li> <li><a href="#">7</a></li> <li><a href="#">8</a></li> 
+                <li ><a href="#">17</a></li>
+                
+                    <li class="currentPage">of 17</li>
+                </ol>
+        </div>
+	
+    </div>
+    <div id="space"></div>
+    <div class="content1">
+	   <div class="sortDisplayWrap">
+	    
+		   <div class="sortWrap" >
+			<select id="sortBySelectTop" class="sortBySelect" onchange="get_val();">
+				<option value="newest">Sort Options</option>
+				<option value="newest" selected="selected">Most Recent</option>
+				
+					<option value="pchg">Recent Price Change</option>
+				
+				<option value="price.asc">Price Low - High</option>
+				<option value="price.desc">Price High - Low</option>
+				<option value="city.az">City A - Z</option>
+				<option value="city.za">City Z - A</option>
+			</select>
+			</div>
+		
+		
+		</div>
+        <a id="navi-next" href="#" class="next"><img src="/img/2012/arrow-right.png" width="25" height="25" alt="Search"></a>
+        <a id="navi-prev" href="#" class="prev"><img src="/img/2012/arrow-left.png" width="25" height="25" alt="Search"></a>
+     </div>
+
+	
+     <div id="saves">
+        <ol>
+            <li id="compare"><a href="/listings/index.cfm?action=xhr.compare" class="fancybox navigator_compare_save" data-fancybox-type="iframe"><img src="/img/2012/compare.png" width="213" height="44" alt="Compare Listings" /></a></li>
+            
+                    <li id="save"><a href="/listings/views/xhr.fb-save-search.cfm" class="save_this_search1 fancybox.ajax"><img src="/img/2012/savesearch.png" width="115" height="25" alt="Save Search" /></a></li>
+                
+            	<li id="newsave"><a href="/listings/index.cfm?action=dsp.search"><img src="/img/2012/newsearch.png" width="120" height="25" alt="Search" /></a></li>
+        	
+        </ol>
+     </div>
+</div>
+
+<script>
+function getCookie(c_name){
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + c_name + "=");
+	if (c_start == -1) {
+		c_start = c_value.indexOf(c_name + "=");
+	}
+	if (c_start == -1) {
+		c_value = null;
+	}
+	else {
+		c_start = c_value.indexOf("=", c_start) + 1;
+		var c_end = c_value.indexOf(";", c_start);
+		if (c_end == -1) {
+			c_end = c_value.length;
+		}
+		c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
+}
+
+function setCookie(c_name,value,exdays) {
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+	document.cookie=c_name + "=" + c_value;
+}
+
+function get_val() {
+	var val_sel=document.getElementById('sortBySelectTop').value;
+	setCookie("sor_ol",val_sel,365);
+	var sort_sl=getCookie("sor_ol");
+}
+$(document).ready(function(){
+	$(".save_this_search1").fancybox({
+		maxWidth: 400,
+		maxHeight: 250,
+		fitToView: false,
+		width: '70%',
+		height: '70%',
+		autoSize: false,
+		closeClick: false,
+		openEffect: 'none',
+		closeEffect: 'none'
+	});
+
+	/*jQuery('#maptab').qtip({
+	    content: {
+	        text: 'New map features',
+	        button: true
+	    },
+	    style: {
+        classes: 'qtip-shadow qtip-rounded',
+        width: 125, // Overrides width set by CSS (but no max-width!)
+        height: 30
+
+   },
+    position: {
+        my: 'bottom left',
+        at: 'top right',
+        adjust: {
+            y: 10,
+            x: 6
+        }
+
+    },
+	    show: {
+	        ready: true
+	    },
+
+	    hide: {
+	        event: false
+	    }
+
+	});*/
+
+});
+</script>
+<div id="resultcount" style="display:none">500</div><div id="list-view-wrap"> 
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$285,000', address: '419  Brittany Dr', city: 'Wayne',state:'NJ',zip:'07470', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746834.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746834&dayssince=15&amp;countysearch=true', mls_number: '1746834', beds: '3', baths_full: '2', baths_part: '0', proptype: 'Condo', lat: '40.965149', lng: '-74.241028' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746834" value="1746834" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746834&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $285,000 in Wayne</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746834&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746834.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746834&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746834</a><br />
+                    419  Brittany Dr, Wayne, NJ 07470<br />
+                   3 Bedroom, 2 Full Bath, Condo 
+								<br />
+								<b>Laurie Hersh</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=63622"><b>Coldwell Banker, Wayne</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746834" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">16</div></a> <div class="nl tips" title="Listed on 12/03/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746834 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746834&timestamp=1512360373660 " class="fancybox listing-map  { address: '419 Brittany Dr', city: 'Wayne', state:'NJ',zip:'07470',mls_number: '1746834', lat: '40.965149', lng: '-74.241028',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'true', price: '$459,500', address: '47  Pines Lake Dr', city: 'Wayne',state:'NJ',zip:'07470', photourl: '/img/2012/no_photo_sm.png', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746837&dayssince=15&amp;countysearch=true', mls_number: '1746837', beds: '4', baths_full: '2', baths_part: '0', proptype: 'C/C', lat: '40.998724', lng: '-74.261939' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746837" value="1746837" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746837&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $459,500 in Wayne</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746837&dayssince=15&amp;countysearch=true">
+								<img src="/img/2012/no_photo_sm.png" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746837&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746837</a><br />
+                    47  Pines Lake Dr, Wayne, NJ 07470<br />
+                   4 Bedroom, 2 Full Bath, C/C 
+								<br />
+								<b>William Lowe</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2474"><b>Better Homes and Gardens Real Estate Rand Realty</b></a> 
+								            <li><strong>Open House:</strong></span> 1:00 P.M. - 4:00 P.M. Sun. 12/3<br />
+								        
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<div class="nophotos tips" title="|No Photos Available"></div> <a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746837&timestamp=1512360373660" style="float:left;" class="fancybox listing-map  { address: '47 Pines Lake Dr', city: 'Wayne', state:'NJ',zip:'07470',mls_number: '1746837', lat: '40.998724', lng: '-74.261939',oh: true }" data-fancybox-type="iframe"><div class="oh tips" title="|Click for Open House details"></div></a> <div class="nl tips" title="Listed on 12/03/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746837 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746837&timestamp=1512360373660 " class="fancybox listing-map  { address: '47 Pines Lake Dr', city: 'Wayne', state:'NJ',zip:'07470',mls_number: '1746837', lat: '40.998724', lng: '-74.261939',oh: true,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$184,500', address: '565  Grove St, Unit E-3', city: 'Clifton',state:'NJ',zip:'07013', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746822.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746822&dayssince=15&amp;countysearch=true', mls_number: '1746822', beds: '1', baths_full: '1', baths_part: '0', proptype: 'Condo', lat: '40.863537', lng: '-74.182078' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746822" value="1746822" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746822&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $184,500 in Clifton</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746822&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746822.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746822&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746822</a><br />
+                    565  Grove St, Unit E-3, Clifton, NJ 07013<br />
+                   1 Bedroom, 1 Full Bath, Condo 
+								<br />
+								<b>Pamela Kutoroff</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=1006"><b>Century 21 Van Der Wende Associates</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746822" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">17</div></a> <div class="nl tips" title="Listed on 12/02/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746822 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746822&timestamp=1512360373660 " class="fancybox listing-map  { address: '565 Grove St', city: 'Clifton', state:'NJ',zip:'07013',mls_number: '1746822', lat: '40.863537', lng: '-74.182078',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$249,900', address: '258-260  Edmund Ave', city: 'Paterson',state:'NJ',zip:'07502', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746824.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746824&dayssince=15&amp;countysearch=true', mls_number: '1746824', beds: '3', baths_full: '1', baths_part: '1', proptype: 'Col', lat: '40.919120', lng: '-74.192050' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746824" value="1746824" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746824&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $249,900 in Paterson</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746824&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746824.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746824&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746824</a><br />
+                    258-260  Edmund Ave, Paterson, NJ 07502<br />
+                   3 Bedroom, 1 Full Bath, <br />1 Half Bath, Col 
+								<br />
+								<b>Matthew Gevirtz</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2474"><b>Better Homes and Gardens Real Estate Rand Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746824" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">17</div></a> <div class="nl tips" title="Listed on 12/02/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746824 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746824&timestamp=1512360373660 " class="fancybox listing-map  { address: '258-260 Edmund Ave', city: 'Paterson', state:'NJ',zip:'07502',mls_number: '1746824', lat: '40.919120', lng: '-74.192050',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$264,900', address: '167  Wagaraw Rd', city: 'Hawthorne',state:'NJ',zip:'07506', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746847.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746847&dayssince=15&amp;countysearch=true', mls_number: '1746847', beds: '2', baths_full: '1', baths_part: '0', proptype: 'Ranch', lat: '40.940815', lng: '-74.157043' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746847" value="1746847" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746847&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $264,900 in Hawthorne</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746847&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746847.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746847&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746847</a><br />
+                    167  Wagaraw Rd, Hawthorne, NJ 07506<br />
+                   2 Bedroom, 1 Full Bath, Ranch 
+								<br />
+								<b>David Quinones Jr.</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=89002"><b>Coldwell Banker Garden State</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746847" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">8</div></a> <div class="nl tips" title="Listed on 12/02/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746847 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746847&timestamp=1512360373660 " class="fancybox listing-map  { address: '167 Wagaraw Rd', city: 'Hawthorne', state:'NJ',zip:'07506',mls_number: '1746847', lat: '40.940815', lng: '-74.157043',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$289,900', address: '72-76  Lakeview Ave', city: 'Paterson',state:'NJ',zip:'07503', photourl: '/img/2012/no_photo_sm.png', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746859&dayssince=15&amp;countysearch=true', mls_number: '1746859', beds: '3', baths_full: '1', baths_part: '0', proptype: 'Col', lat: '40.899780', lng: '-74.141480' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746859" value="1746859" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746859&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $289,900 in Paterson</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746859&dayssince=15&amp;countysearch=true">
+								<img src="/img/2012/no_photo_sm.png" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746859&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746859</a><br />
+                    72-76  Lakeview Ave, Paterson, NJ 07503<br />
+                   3 Bedroom, 1 Full Bath, Col 
+								<br />
+								<b>Patricia Contini</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2762"><b>RE/MAX Trust Properties</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<div class="nophotos tips" title="|No Photos Available"></div> <div class="nl tips" title="Listed on 12/02/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746859 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746859&timestamp=1512360373660 " class="fancybox listing-map  { address: '72-76 Lakeview Ave', city: 'Paterson', state:'NJ',zip:'07503',mls_number: '1746859', lat: '40.899780', lng: '-74.141480',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$489,500', address: '126  Linwood Ter', city: 'Clifton',state:'NJ',zip:'07012', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746762.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746762&dayssince=15&amp;countysearch=true', mls_number: '1746762', beds: '3', baths_full: '3', baths_part: '0', proptype: 'Col', lat: '40.842360', lng: '-74.167120' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746762" value="1746762" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746762&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $489,500 in Clifton</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746762&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746762.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746762&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746762</a><br />
+                    126  Linwood Ter, Clifton, NJ 07012<br />
+                   3 Bedroom, 3 Full Bath, Col 
+								<br />
+								<a href="/members/index.cfm?action=dsp.info&id=1003063   "><b>Paul Verdicchio</b></a></strong>, Broker Owner<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2658"><b>Halo Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746762" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">22</div></a> <div class="nl tips" title="Listed on 12/02/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746762 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746762&timestamp=1512360373660 " class="fancybox listing-map  { address: '126 Linwood Ter', city: 'Clifton', state:'NJ',zip:'07012',mls_number: '1746762', lat: '40.842360', lng: '-74.167120',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$136,900', address: '382  Getty Ave', city: 'Paterson',state:'NJ',zip:'07503', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746663.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746663&dayssince=15&amp;countysearch=true', mls_number: '1746663', beds: '2', baths_full: '2', baths_part: '0', proptype: 'Col', lat: '40.894250', lng: '-74.156510' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746663" value="1746663" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746663&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $136,900 in Paterson</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746663&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746663.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746663&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746663</a><br />
+                    382  Getty Ave, Paterson, NJ 07503<br />
+                   2 Bedroom, 2 Full Bath, Col 
+								<br />
+								<b>Francisco Sanchez</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=890"><b>Nicholas Real Estate Agency</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746663" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">12</div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746663 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746663&timestamp=1512360373660 " class="fancybox listing-map  { address: '382 Getty Ave', city: 'Paterson', state:'NJ',zip:'07503',mls_number: '1746663', lat: '40.894250', lng: '-74.156510',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$179,900', address: '148-150  Nagle St', city: 'Paterson',state:'NJ',zip:'07501', photourl: '/img/2012/no_photo_sm.png', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746661&dayssince=15&amp;countysearch=true', mls_number: '1746661', beds: '2', baths_full: '1', baths_part: '0', proptype: 'Ranch', lat: '40.906800', lng: '-74.192060' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746661" value="1746661" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746661&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $179,900 in Paterson</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746661&dayssince=15&amp;countysearch=true">
+								<img src="/img/2012/no_photo_sm.png" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746661&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746661</a><br />
+                    148-150  Nagle St, Paterson, NJ 07501<br />
+                   2 Bedroom, 1 Full Bath, Ranch 
+								<br />
+								<b>Patricia Contini</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2762"><b>RE/MAX Trust Properties</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<div class="nophotos tips" title="|No Photos Available"></div> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746661 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746661&timestamp=1512360373660 " class="fancybox listing-map  { address: '148-150 Nagle St', city: 'Paterson', state:'NJ',zip:'07501',mls_number: '1746661', lat: '40.906800', lng: '-74.192060',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'true', price: '$219,900', address: '22  Cathy Ave', city: 'Hawthorne',state:'NJ',zip:'07506', photourl: '/img/2012/no_photo_sm.png', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746716&dayssince=15&amp;countysearch=true', mls_number: '1746716', beds: '4', baths_full: '1', baths_part: '0', proptype: 'C/C', lat: '40.966450', lng: '-74.147400' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746716" value="1746716" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746716&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $219,900 in Hawthorne</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746716&dayssince=15&amp;countysearch=true">
+								<img src="/img/2012/no_photo_sm.png" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746716&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746716</a><br />
+                    22  Cathy Ave, Hawthorne, NJ 07506<br />
+                   4 Bedroom, 1 Full Bath, C/C 
+								<br />
+								<b>Lynne Reck</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.info&id=26440     "><b>Scott Jeffers</b></a>, Broker Associate<br /> <a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2402"><b>Keller Williams Village Square Realty</b></a> 
+								            <li><strong>Open House:</strong></span> 1:00 P.M. - 4:00 P.M. Sun. 12/3<br />
+								        
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<div class="nophotos tips" title="|No Photos Available"></div> <a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746716&timestamp=1512360373660" style="float:left;" class="fancybox listing-map  { address: '22 Cathy Ave', city: 'Hawthorne', state:'NJ',zip:'07506',mls_number: '1746716', lat: '40.966450', lng: '-74.147400',oh: true }" data-fancybox-type="iframe"><div class="oh tips" title="|Click for Open House details"></div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746716 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746716&timestamp=1512360373660 " class="fancybox listing-map  { address: '22 Cathy Ave', city: 'Hawthorne', state:'NJ',zip:'07506',mls_number: '1746716', lat: '40.966450', lng: '-74.147400',oh: true,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$264,500', address: '30  Federal Hill Rd, Unit 12', city: 'Pompton Lakes',state:'NJ',zip:'07442', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746701.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746701&dayssince=15&amp;countysearch=true', mls_number: '1746701', beds: '2', baths_full: '2', baths_part: '1', proptype: 'Twnhs', lat: '41.009937', lng: '-74.300722' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746701" value="1746701" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746701&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $264,500 in Pompton Lakes</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746701&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746701.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746701&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746701</a><br />
+                    30  Federal Hill Rd, Unit 12, Pompton Lakes, NJ 07442<br />
+                   2 Bedroom, 2 Full Bath, <br />1 Half Bath, Twnhs 
+								<br />
+								<b>Michele DeStefano</b></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2402"><b>Keller Williams Village Square Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746701" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">15</div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746701 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746701&timestamp=1512360373660 " class="fancybox listing-map  { address: '30 Federal Hill Rd', city: 'Pompton Lakes', state:'NJ',zip:'07442',mls_number: '1746701', lat: '41.009937', lng: '-74.300722',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$265,000', address: '14I  Brookside Hts', city: 'Wanaque',state:'NJ',zip:'07465', photourl: '/img/2012/no_photo_sm.png', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746828&dayssince=15&amp;countysearch=true', mls_number: '1746828', beds: '3', baths_full: '2', baths_part: '1', proptype: 'Condo', lat: '41.060950', lng: '-74.275659' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746828" value="1746828" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746828&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $265,000 in Wanaque</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746828&dayssince=15&amp;countysearch=true">
+								<img src="/img/2012/no_photo_sm.png" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746828&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746828</a><br />
+                    14I  Brookside Hts, Wanaque, NJ 07465<br />
+                   3 Bedroom, 2 Full Bath, <br />1 Half Bath, Condo 
+								<br />
+								<b>Yelena Notkina</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=1425"><b>RE/MAX Properties Select</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<div class="nophotos tips" title="|No Photos Available"></div> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746828 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746828&timestamp=1512360373660 " class="fancybox listing-map  { address: '14I Brookside Hts', city: 'Wanaque', state:'NJ',zip:'07465',mls_number: '1746828', lat: '41.060950', lng: '-74.275659',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$275,000', address: '14  Messerve Pl', city: 'North Haledon',state:'NJ',zip:'07508', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746738.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746738&dayssince=15&amp;countysearch=true', mls_number: '1746738', beds: '3', baths_full: '1', baths_part: '0', proptype: 'S/L', lat: '40.958420', lng: '-74.180060' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746738" value="1746738" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746738&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $275,000 in North Haledon</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746738&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746738.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746738&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746738</a><br />
+                    14  Messerve Pl, North Haledon, NJ 07508<br />
+                   3 Bedroom, 1 Full Bath, S/L 
+								<br />
+								<b>Michael Kopplin</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2402"><b>Keller Williams Village Square Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746738" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">15</div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746738 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746738&timestamp=1512360373676 " class="fancybox listing-map  { address: '14 Messerve Pl', city: 'North Haledon', state:'NJ',zip:'07508',mls_number: '1746738', lat: '40.958420', lng: '-74.180060',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$315,000', address: '32  Ivanhoe Ln', city: 'Clifton',state:'NJ',zip:'07013', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746752.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746752&dayssince=15&amp;countysearch=true', mls_number: '1746752', beds: '2', baths_full: '2', baths_part: '0', proptype: 'Ranch', lat: '40.866860', lng: '-74.185870' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746752" value="1746752" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746752&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $315,000 in Clifton</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746752&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746752.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746752&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746752</a><br />
+                    32  Ivanhoe Ln, Clifton, NJ 07013<br />
+                   2 Bedroom, 2 Full Bath, Ranch 
+								<br />
+								<b>Sabrina Aversa</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2811"><b>The Realty Boutique</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746752" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">10</div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746752 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746752&timestamp=1512360373676 " class="fancybox listing-map  { address: '32 Ivanhoe Ln', city: 'Clifton', state:'NJ',zip:'07013',mls_number: '1746752', lat: '40.866860', lng: '-74.185870',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$319,900', address: '55  Cedarbrook Rd', city: 'West Milford',state:'NJ',zip:'07421', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746730.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746730&dayssince=15&amp;countysearch=true', mls_number: '1746730', beds: '3', baths_full: '2', baths_part: '1', proptype: 'Col', lat: '41.178011', lng: '-74.387941' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746730" value="1746730" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746730&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $319,900 in West Milford</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746730&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746730.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746730&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746730</a><br />
+                    55  Cedarbrook Rd, West Milford, NJ 07421<br />
+                   3 Bedroom, 2 Full Bath, <br />1 Half Bath, Col 
+								<br />
+								<b>Michele DeStefano</b></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2402"><b>Keller Williams Village Square Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746730" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">21</div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746730 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746730&timestamp=1512360373676 " class="fancybox listing-map  { address: '55 Cedarbrook Rd', city: 'West Milford', state:'NJ',zip:'07421',mls_number: '1746730', lat: '41.178011', lng: '-74.387941',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'true', price: '$343,000', address: '12  Annette Ave', city: 'Hawthorne',state:'NJ',zip:'07506', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746603.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746603&dayssince=15&amp;countysearch=true', mls_number: '1746603', beds: '3', baths_full: '2', baths_part: '0', proptype: 'C/C', lat: '40.955244', lng: '-74.147103' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746603" value="1746603" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746603&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $343,000 in Hawthorne</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746603&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746603.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746603&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746603</a><br />
+                    12  Annette Ave, Hawthorne, NJ 07506<br />
+                   3 Bedroom, 2 Full Bath, C/C 
+								<br />
+								<b>Vivienne I. Muldoon</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2402"><b>Keller Williams Village Square Realty</b></a> 
+								            <li><strong>Open House:</strong></span> 1:00 P.M. - 4:00 P.M. Sun. 12/3<br />
+								        
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746603" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">23</div></a> <a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746603&timestamp=1512360373676" style="float:left;" class="fancybox listing-map  { address: '12 Annette Ave', city: 'Hawthorne', state:'NJ',zip:'07506',mls_number: '1746603', lat: '40.955244', lng: '-74.147103',oh: true }" data-fancybox-type="iframe"><div class="oh tips" title="|Click for Open House details"></div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746603 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746603&timestamp=1512360373676 " class="fancybox listing-map  { address: '12 Annette Ave', city: 'Hawthorne', state:'NJ',zip:'07506',mls_number: '1746603', lat: '40.955244', lng: '-74.147103',oh: true,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'true', price: '$349,900', address: '288  Lincoln Ave', city: 'Totowa',state:'NJ',zip:'07512', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746620.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746620&dayssince=15&amp;countysearch=true', mls_number: '1746620', beds: '3', baths_full: '1', baths_part: '1', proptype: 'Ranch', lat: '40.911820', lng: '-74.207500' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746620" value="1746620" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746620&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $349,900 in Totowa</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746620&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746620.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746620&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746620</a><br />
+                    288  Lincoln Ave, Totowa, NJ 07512<br />
+                   3 Bedroom, 1 Full Bath, <br />1 Half Bath, Ranch 
+								<br />
+								<b>Karen Leopizzi</b></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=795"><b>Leopizzi Real Estate Agency</b></a> 
+								            <li><strong>Open House:</strong></span> 2:00 P.M. - 4:00 P.M. Sat. 12/9<br />
+								        
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746620" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">6</div></a> <a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746620&timestamp=1512360373676" style="float:left;" class="fancybox listing-map  { address: '288 Lincoln Ave', city: 'Totowa', state:'NJ',zip:'07512',mls_number: '1746620', lat: '40.911820', lng: '-74.207500',oh: true }" data-fancybox-type="iframe"><div class="oh tips" title="|Click for Open House details"></div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746620 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746620&timestamp=1512360373676 " class="fancybox listing-map  { address: '288 Lincoln Ave', city: 'Totowa', state:'NJ',zip:'07512',mls_number: '1746620', lat: '40.911820', lng: '-74.207500',oh: true,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$389,000', address: '10  Francisco Ave', city: 'Little Falls',state:'NJ',zip:'07424', photourl: '/img/2012/no_photo_sm.png', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746673&dayssince=15&amp;countysearch=true', mls_number: '1746673', beds: '4', baths_full: '1', baths_part: '1', proptype: 'Col', lat: '40.871817', lng: '-74.220883' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746673" value="1746673" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746673&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $389,000 in Little Falls</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746673&dayssince=15&amp;countysearch=true">
+								<img src="/img/2012/no_photo_sm.png" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746673&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746673</a><br />
+                    10  Francisco Ave, Little Falls, NJ 07424<br />
+                   4 Bedroom, 1 Full Bath, <br />1 Half Bath, Col 
+								<br />
+								<b>Judith Mizzone</b></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=135406"><b>Realty Executives Exceptional Realtors-Woodland Park</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<div class="nophotos tips" title="|No Photos Available"></div> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746673 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746673&timestamp=1512360373676 " class="fancybox listing-map  { address: '10 Francisco Ave', city: 'Little Falls', state:'NJ',zip:'07424',mls_number: '1746673', lat: '40.871817', lng: '-74.220883',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'true', price: '$459,000', address: '135  Henderson Rd', city: 'West Milford',state:'NJ',zip:'07460', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746630.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746630&dayssince=15&amp;countysearch=true', mls_number: '1746630', beds: '4', baths_full: '2', baths_part: '2', proptype: 'Col', lat: '41.103420', lng: '-74.474480' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746630" value="1746630" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746630&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $459,000 in West Milford</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746630&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746630.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746630&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746630</a><br />
+                    135  Henderson Rd, West Milford, NJ 07460<br />
+                   4 Bedroom, 2 Full Bath, <br />2 Half Bath, Col 
+								<br />
+								<a href="/members/index.cfm?action=dsp.info&id=1011903   "><b>Julia Gaffney</b></a></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=63629"><b>Coldwell Banker, Kinnelon/Butler</b></a> 
+								            <li><strong>Open House:</strong></span> 12:00 P.M. - 3:00 P.M. Sun. 12/17<br />
+								        
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746630" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">14</div></a> <a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746630&timestamp=1512360373676" style="float:left;" class="fancybox listing-map  { address: '135 Henderson Rd', city: 'West Milford', state:'NJ',zip:'07460',mls_number: '1746630', lat: '41.103420', lng: '-74.474480',oh: true }" data-fancybox-type="iframe"><div class="oh tips" title="|Click for Open House details"></div></a> <div class="nl tips" title="Listed on 12/01/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746630 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746630&timestamp=1512360373676 " class="fancybox listing-map  { address: '135 Henderson Rd', city: 'West Milford', state:'NJ',zip:'07460',mls_number: '1746630', lat: '41.103420', lng: '-74.474480',oh: true,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$114,900', address: '5308  Richmond Rd', city: 'West Milford',state:'NJ',zip:'07480', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746680.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746680&dayssince=15&amp;countysearch=true', mls_number: '1746680', beds: '2', baths_full: '1', baths_part: '0', proptype: 'Condo', lat: '41.120677', lng: '-74.364064' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746680" value="1746680" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746680&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $114,900 in West Milford</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746680&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746680.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746680&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746680</a><br />
+                    5308  Richmond Rd, West Milford, NJ 07480<br />
+                   2 Bedroom, 1 Full Bath, Condo 
+								<br />
+								<a href="/members/index.cfm?action=dsp.info&id=31753     "><b>Karen Wiedmann</b></a></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2710"><b>RE/MAX Country Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746680" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">8</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746680 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746680&timestamp=1512360373676 " class="fancybox listing-map  { address: '5308 Richmond Rd', city: 'West Milford', state:'NJ',zip:'07480',mls_number: '1746680', lat: '41.120677', lng: '-74.364064',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$144,900', address: '186  Lake Shore Dr', city: 'West Milford',state:'NJ',zip:'07421', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746652.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746652&dayssince=15&amp;countysearch=true', mls_number: '1746652', beds: '4', baths_full: '1', baths_part: '1', proptype: 'Col', lat: '41.175388', lng: '-74.373312' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746652" value="1746652" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746652&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $144,900 in West Milford</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746652&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746652.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746652&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746652</a><br />
+                    186  Lake Shore Dr, West Milford, NJ 07421<br />
+                   4 Bedroom, 1 Full Bath, <br />1 Half Bath, Col 
+								<br />
+								<b>David Quinones Jr.</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=89002"><b>Coldwell Banker Garden State</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746652" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">7</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746652 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746652&timestamp=1512360373676 " class="fancybox listing-map  { address: '186 Lake Shore Dr', city: 'West Milford', state:'NJ',zip:'07421',mls_number: '1746652', lat: '41.175388', lng: '-74.373312',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$149,000', address: '24  Jefferson St', city: 'Paterson',state:'NJ',zip:'07522', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746556.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746556&dayssince=15&amp;countysearch=true', mls_number: '1746556', beds: '3', baths_full: '2', baths_part: '0', proptype: 'Duplex', lat: '40.924830', lng: '-74.170240' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746556" value="1746556" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746556&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $149,000 in Paterson</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746556&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746556.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746556&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746556</a><br />
+                    24  Jefferson St, Paterson, NJ 07522<br />
+                   3 Bedroom, 2 Full Bath, Duplex 
+								<br />
+								<b>John A. Scipione</b></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2541"><b>Court Street Property Group</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746556" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">14</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746556 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746556&timestamp=1512360373676 " class="fancybox listing-map  { address: '24 Jefferson St', city: 'Paterson', state:'NJ',zip:'07522',mls_number: '1746556', lat: '40.924830', lng: '-74.170240',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$160,000', address: '173-175 E 26th St', city: 'Paterson',state:'NJ',zip:'07514', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746484.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746484&dayssince=15&amp;countysearch=true', mls_number: '1746484', beds: '4', baths_full: '2', baths_part: '0', proptype: 'C/C', lat: '40.932220', lng: '-74.144340' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746484" value="1746484" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746484&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $160,000 in Paterson</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746484&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746484.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746484&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746484</a><br />
+                    173-175 E 26th St, Paterson, NJ 07514<br />
+                   4 Bedroom, 2 Full Bath, C/C 
+								<br />
+								<b>Evelyn A. Oberkircher</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2402"><b>Keller Williams Village Square Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746484" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">25</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746484 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746484&timestamp=1512360373676 " class="fancybox listing-map  { address: '173-175 E 26th St', city: 'Paterson', state:'NJ',zip:'07514',mls_number: '1746484', lat: '40.932220', lng: '-74.144340',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$199,900', address: '50  Birch Ave', city: 'West Milford',state:'NJ',zip:'07480', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746645.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746645&dayssince=15&amp;countysearch=true', mls_number: '1746645', beds: '3', baths_full: '2', baths_part: '0', proptype: 'Ranch', lat: '41.150524', lng: '-74.354172' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746645" value="1746645" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746645&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $199,900 in West Milford</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746645&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746645.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746645&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746645</a><br />
+                    50  Birch Ave, West Milford, NJ 07480<br />
+                   3 Bedroom, 2 Full Bath, Ranch 
+								<br />
+								<b>Barbara Pagella</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=70206"><b>Terrie O'Connor Realtors-Kinnelon</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746645" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">25</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746645 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746645&timestamp=1512360373676 " class="fancybox listing-map  { address: '50 Birch Ave', city: 'West Milford', state:'NJ',zip:'07480',mls_number: '1746645', lat: '41.150524', lng: '-74.354172',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$229,900', address: '40-42  Richmond Ave', city: 'Paterson',state:'NJ',zip:'07502', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746570.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746570&dayssince=15&amp;countysearch=true', mls_number: '1746570', beds: '3', baths_full: '2', baths_part: '0', proptype: 'Col', lat: '40.914730', lng: '-74.193330' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746570" value="1746570" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746570&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $229,900 in Paterson</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746570&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746570.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746570&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746570</a><br />
+                    40-42  Richmond Ave, Paterson, NJ 07502<br />
+                   3 Bedroom, 2 Full Bath, Col 
+								<br />
+								<b>Nancy Pavic</b></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2016"><b>Casa Real Properties</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746570" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">15</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746570 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746570&timestamp=1512360373676 " class="fancybox listing-map  { address: '40-42 Richmond Ave', city: 'Paterson', state:'NJ',zip:'07502',mls_number: '1746570', lat: '40.914730', lng: '-74.193330',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'true', price: '$324,900', address: '16  Howd Ave', city: 'Clifton',state:'NJ',zip:'07011', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746524.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746524&dayssince=15&amp;countysearch=true', mls_number: '1746524', beds: '3', baths_full: '2', baths_part: '0', proptype: 'C/C', lat: '40.881890', lng: '-74.140680' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746524" value="1746524" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746524&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $324,900 in Clifton</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746524&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746524.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746524&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746524</a><br />
+                    16  Howd Ave, Clifton, NJ 07011<br />
+                   3 Bedroom, 2 Full Bath, C/C 
+								<br />
+								<b>Edgar A. Meza</b></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=890"><b>Nicholas Real Estate Agency</b></a> 
+								            <li><strong>Open House:</strong></span> 1:00 P.M. - 4:00 P.M. Sun. 12/3<br />
+								        
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746524" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">15</div></a> <a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746524&timestamp=1512360373676" style="float:left;" class="fancybox listing-map  { address: '16 Howd Ave', city: 'Clifton', state:'NJ',zip:'07011',mls_number: '1746524', lat: '40.881890', lng: '-74.140680',oh: true }" data-fancybox-type="iframe"><div class="oh tips" title="|Click for Open House details"></div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746524 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746524&timestamp=1512360373676 " class="fancybox listing-map  { address: '16 Howd Ave', city: 'Clifton', state:'NJ',zip:'07011',mls_number: '1746524', lat: '40.881890', lng: '-74.140680',oh: true,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'true', price: '$379,000', address: '51  Marlboro Rd', city: 'Clifton',state:'NJ',zip:'07012', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746622.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746622&dayssince=15&amp;countysearch=true', mls_number: '1746622', beds: '3', baths_full: '1', baths_part: '0', proptype: 'Col', lat: '40.844670', lng: '-74.165500' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746622" value="1746622" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746622&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $379,000 in Clifton</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746622&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746622.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746622&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746622</a><br />
+                    51  Marlboro Rd, Clifton, NJ 07012<br />
+                   3 Bedroom, 1 Full Bath, Col 
+								<br />
+								<a href="/members/index.cfm?action=dsp.info&id=1002313   "><b>Kasia Nowakowska</b></a></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2490"><b>RE/MAX White House</b></a> 
+								            <li><strong>Open House:</strong></span> 1:00 P.M. - 4:00 P.M. Sun. 12/3<br />
+								        
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746622" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">25</div></a> <a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746622&timestamp=1512360373676" style="float:left;" class="fancybox listing-map  { address: '51 Marlboro Rd', city: 'Clifton', state:'NJ',zip:'07012',mls_number: '1746622', lat: '40.844670', lng: '-74.165500',oh: true }" data-fancybox-type="iframe"><div class="oh tips" title="|Click for Open House details"></div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746622 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746622&timestamp=1512360373676 " class="fancybox listing-map  { address: '51 Marlboro Rd', city: 'Clifton', state:'NJ',zip:'07012',mls_number: '1746622', lat: '40.844670', lng: '-74.165500',oh: true,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$415,000', address: '63  Wayne Ave', city: 'North Haledon',state:'NJ',zip:'07508', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746501.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746501&dayssince=15&amp;countysearch=true', mls_number: '1746501', beds: '3', baths_full: '2', baths_part: '0', proptype: 'Ranch', lat: '40.960330', lng: '-74.180230' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746501" value="1746501" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746501&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $415,000 in North Haledon</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746501&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746501.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746501&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746501</a><br />
+                    63  Wayne Ave, North Haledon, NJ 07508<br />
+                   3 Bedroom, 2 Full Bath, Ranch 
+								<br />
+								<a href="/members/index.cfm?action=dsp.info&id=12104     "><b>Carolee Chirico</b></a></strong>, Broker Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=2570"><b>Keller Williams Valley Realty</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746501" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">20</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746501 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746501&timestamp=1512360373676 " class="fancybox listing-map  { address: '63 Wayne Ave', city: 'North Haledon', state:'NJ',zip:'07508',mls_number: '1746501', lat: '40.960330', lng: '-74.180230',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$479,900', address: '20  Melissa Dr', city: 'Totowa',state:'NJ',zip:'07512', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746498.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746498&dayssince=15&amp;countysearch=true', mls_number: '1746498', beds: '4', baths_full: '2', baths_part: '1', proptype: 'B/L', lat: '40.891600', lng: '-74.232850' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746498" value="1746498" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746498&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $479,900 in Totowa</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746498&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746498.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746498&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746498</a><br />
+                    20  Melissa Dr, Totowa, NJ 07512<br />
+                   4 Bedroom, 2 Full Bath, <br />1 Half Bath, B/L 
+								<br />
+								<b>Mary Contini</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=247401"><b>Better Homes and Gardens Real Estate Rand Realty, Hawthorne</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746498" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">20</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746498 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746498&timestamp=1512360373676 " class="fancybox listing-map  { address: '20 Melissa Dr', city: 'Totowa', state:'NJ',zip:'07512',mls_number: '1746498', lat: '40.891600', lng: '-74.232850',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+
+         <div class="houseresults listingrecord { oh: 'false', price: '$489,000', address: '1  Friar Ln', city: 'Clifton',state:'NJ',zip:'07013', photourl: 'http://pxlimages.xmlsweb.com/njmls/l/images/1746560.1.jpg', detailurl: '/listings/index.cfm?action=dsp.info&amp;mlsnum=1746560&dayssince=15&amp;countysearch=true', mls_number: '1746560', beds: '3', baths_full: '2', baths_part: '1', proptype: 'Ranch', lat: '40.865570', lng: '-74.179730' }" style="width:600px;">
+            <input type="checkbox" class="compare_listing" id="SearchResultListID_1746560" value="1746560" />
+            <label><a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746560&dayssince=15&amp;countysearch=true" style="text-decoration:none;font-weight:normal;">    $489,000 in Clifton</a></label>
+            <div id="details">
+                <table width="100%" style="margin-top:8px;">
+                    <tr>
+                        <td width="276" style="vertical-align:top;">
+                            <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746560&dayssince=15&amp;countysearch=true">
+								<img src="http://pxlimages.xmlsweb.com/njmls/l/images/1746560.1.jpg" alt="" width="266" class="listingimg tips" title="|View Details" onerror="$(this).attr('src', '/img/2012/no_photo_sm.png');" style="max-height:196px;" />
+							</a>
+                        </td>
+                        <td style="vertical-align:top;">
+                <strong> MLS # </strong> <a href="/listings/index.cfm?action=dsp.info&amp;mlsnum=1746560&dayssince=15&amp;countysearch=true" style="font-size:1.0em;">1746560</a><br />
+                    1  Friar Ln, Clifton, NJ 07013<br />
+                   3 Bedroom, 2 Full Bath, <br />1 Half Bath, Ranch 
+								<br />
+								<b>Danuta Tyszka</b></strong>, Sales Associate<br />
+								<a href="/members/index.cfm?action=dsp.results_ofc&type=zip&officeid=22216"><b>Weichert Realtors, Wayne</b></a> 
+
+
+
+
+
+                    </td>
+                     </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td style="width:320px;padding-left:3px;">
+
+						<a href="/listings/index.cfm?action=xhr.listing_photos&mlsnum=1746560" class="fancybox listing-photos" data-fancybox-type="iframe"><div class="photos tips" title="|View Photo Gallery">16</div></a> <div class="nl tips" title="Listed on 11/30/17"></div> 
+                    </td>
+                    <td style="align:right;margin:0px;">
+                        
+                                <a href="javascript:;" class="save_as_favorite { mlsnum: 1746560 }"><div class="saveFavorite"></div></a>
+                        
+							<a href="/listings/index.cfm?action=xhr.map_get_directions&mlsnum=1746560&timestamp=1512360373676 " class="fancybox listing-map  { address: '1 Friar Ln', city: 'Clifton', state:'NJ',zip:'07013',mls_number: '1746560', lat: '40.865570', lng: '-74.179730',oh: false,status:'A' }" data-fancybox-type="iframe">
+								<div class="mapsResults" >&nbsp;</div>
+							</a>
+						
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div> 
+<div class="clr"></div>
+<div class="results-footer">
+    <div id="saves2">
+        <ol>
+            <li id="compare2"><a href="/listings/index.cfm?action=xhr.compare" class="fancybox navigator_compare_save" data-fancybox-type="iframe"><img src="/img/2012/compare2.png" width="213" height="44" alt="Compare Listings" /></a></li>
+
+            <li id="save2"><a href="/listings/views/xhr.fb-save-search.cfm" class="save_this_search1 fancybox.ajax"><img src="/img/2012/savesearch.png" width="115" height="25" alt="Save Search" /></a></li>
+
+            <li id="newsave2"><a href="/listings/index.cfm?action=dsp.search"><img src="/img/2012/newsearch.png" width="120" height="25" alt="Search" /></a></li>
+        </ol>
+    </div>
+    <div class="clr"></div>
+    <div id="space"></div>
+    <div class="content2">
+	   <div class="sortDisplayWrap">
+       
+		   <div class="sortWrap" >
+             <select id="sortBySelect" class="sortBySelect">
+				<option value="newest">Sort Options</option>
+				<option value="newest">Sort Options</option>
+				<option value="newest" selected="selected">Most Recent</option>
+				
+					<option value="pchg">Recent Price Change</option>
+				
+				<option value="price.asc">Price Low - High</option>
+				<option value="price.desc">Price High - Low</option>
+				<option value="city.az">City A - Z</option>
+				<option value="city.za">City Z - A</option>
+             </select>
+			</div>
+        
+		
+		</div>
+        <a id="navi-next-btm" href="#" class="next"><img src="/img/2012/arrow-right.png" width="25" height="25" alt="Search" /></a>
+        <a id="navi-prev-btm" href="#" class="prev"><img src="/img/2012/arrow-left.png" width="25" height="25" alt="Search" /></a>
+     </div>
+    <div style="display:none"><input type="hidden" id="total_pages_ref" value="17" /></div>
+    <div class="clr"></div>
+    
+		<div id="pagelist2">
+                <ol class="pagenumbers">
+                    <li class="currentPage">Pages</li>
+                    <li>1</li>
+                <li><a href="#">2</a></li> <li><a href="#">3</a></li> <li><a href="#">4</a></li> <li><a href="#">5</a></li> <li><a href="#">6</a></li> <li><a href="#">7</a></li> <li><a href="#">8</a></li> 
+                <li ><a href="#">17</a></li>
+                
+                    <li class="currentPage">of 17</li>
+                </ol>
+        </div>
+	
+</div>
+
+
+<script>
+function getCookie(c_name){
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + c_name + "=");
+	if (c_start == -1) {
+		c_start = c_value.indexOf(c_name + "=");
+	}
+	if (c_start == -1) {
+		c_value = null;
+	}
+	else {
+		c_start = c_value.indexOf("=", c_start) + 1;
+		var c_end = c_value.indexOf(";", c_start);
+		if (c_end == -1) {
+			c_end = c_value.length;
+		}
+		c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
+}
+
+function setCookie(c_name,value,exdays) {
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+	document.cookie=c_name + "=" + c_value;
+}
+
+function get_val() {
+	var val_sel=document.getElementById('sortBySelectTop').value;
+	setCookie("sor_ol",val_sel,365);
+	var sort_sl=getCookie("sor_ol");
+}
+$(document).ready(function(){
+	$(".save_this_search1").fancybox({
+		maxWidth: 400,
+		maxHeight: 250,
+		fitToView: false,
+		width: '70%',
+		height: '70%',
+		autoSize: false,
+		closeClick: false,
+		openEffect: 'none',
+		closeEffect: 'none'
+	});
+
+	/*jQuery('#maptab').qtip({
+	    content: {
+	        text: 'New map features',
+	        button: true
+	    },
+	    style: {
+        classes: 'qtip-shadow qtip-rounded',
+        width: 125, // Overrides width set by CSS (but no max-width!)
+        height: 30
+
+   },
+    position: {
+        my: 'bottom left',
+        at: 'top right',
+        adjust: {
+            y: 10,
+            x: 6
+        }
+
+    },
+	    show: {
+	        ready: true
+	    },
+
+	    hide: {
+	        event: false
+	    }
+
+	});*/
+
+});
+</script>
