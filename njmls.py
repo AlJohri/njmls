@@ -5,11 +5,14 @@ import requests
 import lxml.html
 from typing import List
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 def get_listing_detail(mlsnum):
     response = get_listing_detail_inner(mlsnum)
-    return parse_listing_detail(response)
+    try:
+        return parse_listing_detail(response)
+    except Exception as e:
+        raise Exception(f"failed to parse mlsnum {mlsnum}")
 
 def get_listing_detail_inner(mlsnum):
     response = requests.get(f"http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum={mlsnum}")
@@ -54,19 +57,19 @@ def parse_listing_detail(response):
     """
 
     ret = {
-        'id': parse_int(get(listing, 'strong', 'MLS#:', lambda x: x).tail),
-        'address': parse_str(get(listing, 'strong', 'Address:', lambda x: x).tail),
-        'city': parse_str(get(listing, 'strong', 'Town:', lambda x: x).tail),
-        'price': parse_money(get(listing, 'strong', 'Current Price:', lambda x: x).tail),
-        'style': parse_str(get(listing, 'strong', 'Style:', lambda x: x).tail),
-        'rooms': parse_int(get(listing, 'strong', 'Rooms:', lambda x: x).tail),
-        'bedrooms': parse_int(get(listing, 'strong', 'Bedrooms:', lambda x: x).tail),
-        'baths_full': parse_int(get(listing, 'strong', 'Full Baths:', lambda x: x).tail),
-        'baths_part': parse_int(get(listing, 'strong', 'Half Baths:', lambda x: x).tail),
-        'basement': parse_str(get(listing, 'strong', 'Basement:', lambda x: x).tail).replace(',', ', '),
-        'garage': parse_str(get(listing, 'strong', 'Garage:', lambda x: x).tail).replace(',', ', '),
-        'list_date': parse_str(get(listing, 'strong', 'List Date:', lambda x: x).tail),
-        'tax': parse_money(get(listing, 'strong', 'Taxes:', lambda x: x).tail),
+        'id': parse_int(get(listing, 'strong', 'MLS#:', lambda x: x.tail)),
+        'address': parse_str(get(listing, 'strong', 'Address:', lambda x: x.tail)),
+        'city': parse_str(get(listing, 'strong', 'Town:', lambda x: x.tail)),
+        'price': parse_money(get(listing, 'strong', 'Current Price:', lambda x: x.tail)),
+        'style': parse_str(get(listing, 'strong', 'Style:', lambda x: x.tail)),
+        'rooms': parse_int(get(listing, 'strong', 'Rooms:', lambda x: x.tail)),
+        'bedrooms': parse_int(get(listing, 'strong', 'Bedrooms:', lambda x: x.tail)),
+        'baths_full': parse_int(get(listing, 'strong', 'Full Baths:', lambda x: x.tail)),
+        'baths_part': parse_int(get(listing, 'strong', 'Half Baths:', lambda x: x.tail)),
+        'basement': parse_str(get(listing, 'strong', 'Basement:', lambda x: x.tail)),
+        'garage': parse_str(get(listing, 'strong', 'Garage:', lambda x: x.tail)),
+        'list_date': parse_str(get(listing, 'strong', 'List Date:', lambda x: x.tail)),
+        'tax': parse_money(get(listing, 'strong', 'Taxes:', lambda x: x.tail)),
     }
 
     return ret
@@ -179,6 +182,9 @@ def get_listings_inner(
     if "Our web site is current down for maintenance" in response.text:
         raise Exception("NJMLS is down for maintenance.")
 
+    if "No listings found" in response.text:
+        raise Exception("No listings found.")
+
     return response
 
 def parse_row(row):
@@ -201,6 +207,8 @@ def get_listings(**kwargs):
 
     response = get_listings_inner(page=1, **kwargs)
     doc = lxml.html.fromstring(response.text)
+    if "The server is temporarily unable to service your request due to maintenance downtime or capacity problems. Please try again later." in response.text:
+        raise Exception("server is temporarily unable to service your request due to maintenance downtime or capacity problems")
     try:
         current_page = int([x.text for x in doc.cssselect('#pagelist2 ol.pagenumbers li:not(.currentPage)') if not x.get('a')][0])
     except Exception as e:
