@@ -192,7 +192,7 @@ def parse_row(row):
     # Yaml requres a space after the colon
     # http://pyyaml.org/wiki/YAMLColonInFlowContext
     data_str = data_str.replace(":'", ": '")
-    listing = yaml.load(data_str)
+    listing = yaml.safe_load(data_str)
     listing.pop('oh') # don't care about open house temporarily
     listing.pop('detailurl') # don't care about detailurl for now, mls_number should be enough
     listing.pop('state') # state is redundant for now
