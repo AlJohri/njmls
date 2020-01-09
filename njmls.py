@@ -5,7 +5,7 @@ import requests
 import lxml.html
 from typing import List
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 def get_listing_detail(mlsnum):
     response = get_listing_detail_inner(mlsnum)
